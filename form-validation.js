@@ -7,6 +7,14 @@ function validate(){
   } else{
       document.getElementById("usernameGroup").classList.add("has-error");
   }
+  var str = ("passwordGroup")
+  var pos = str.search("passEntered");
+  if (passEntered=="password"){
+    document.getElementById("passwordGroup").classList.add("has-error");
+    document.getElementById("passwordError").innerHTML="Bad password.";
+  }else{
+    document.getElementById("passwordGroup").classList.add("has-success");
+  }
 //   //Show message that there is an error with the username...
 //   document.getElementById("usernameError").innerHTML="Bad username.";
 //   document.getElementById("usernameError").classList.remove("hidden-message");
